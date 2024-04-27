@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/homepageReal.css">
+  <title>FashionFlix - Home</title>
+  
+</head>
+
+<body >
+  <div class="main" onclick="removeSideBar();">
+    <div class="side-bar" id="side-bar">
+      <button onclick="
+        sideBar();
+        "><img src="imgs/back-sidebar.png" alt=""></button>
+      
+    </div>
+    <!-- END SIDEBAR -->
+    <div class="first" id="first-scroll">
+      <!-- NAVIGATION BAR -->
+      <div class="nav-bar">
+        <div class="logo">
+          <img src="imgs/web-logo.png" alt="">
+        </div>
+
+        <div class="shortcuts">
+          <a href="">Home</a>
+          <a href="">All Products</a>
+          <a href="">Shoes</a>
+          <a href="">Clothes</a>
+          <a href="">About Us</a>
+        </div>
+
+        <div class="cart-account">
+          <button class="cartt" 
+          onclick="
+          sideBar();
+          "><p class="num-items"></p><img src="imgs/cart-icon.webp" alt=""></button>
+          <a href="log-in.html"><img src="imgs/account-icon.webp" alt=""></a>
+        </div>
+      </div>
+      <!-- END NAV BAR -->
+      
+      <div class="first-contents">
+        <div class="headers">
+          <h1>CREATE YOUR STYLE: STEP INTO THE WORLD OF FASHION</h1>
+          <p>DISCOVER THE PERFECT FIT FOR YOU!</p>
+          <button
+          onclick="
+          num++;
+          numberOfItems();
+          "
+          >SHOP NOW</button>
+        </div>
+        
+        <div class="model-pics">
+          <img src="imgs/models_1.png" alt="">
+        </div>
+      </div>
+  
+     
+    <div class="second-contents" id="second">
+      <div class="promo-items">
+        <img src="imgs/leatherShoes.jpg" alt="">
+        <p>50% OFF ON LEATHER SHOES</p>
+        <a href="">Shop Now</a>
+      </div>
+      <div class="promo-items">
+        <img src="imgs/gucci-item.webp" alt="">
+        <p>NEW ARRIVED GUCCI SHIRTS</p>
+        <a href="">Shop Now</a>
+      </div>
+      <div class="promo-items">
+        <img src="imgs/yellowJacket.jpg" alt="">
+        <p>STYLE FOR EVERY WEATHER</p>
+        <a href="">Shop Now</a>
+      </div>
+    </div>
+  
+    <div class="down2">
+
+    </div>
+
+    <footer class="footer-main">
+        <div class="left-footer">
+          <p>PRODUCTS</p>
+          <a href="#">Featured</a>
+          <a href="#">Shoes</a>
+          <a href="#">Clothes</a>
+        </div>
+
+        <div class="middle-footer">
+          <p>CONTACTS</p>
+          <ul>
+            <li><a href=""><img src="imgs/home-icon.png" alt=""> &nbsp;P-12 POGI ST. HANDSOME VILLAGE, DAVAO CITY</a></li>
+            <li><a href=""><img src="imgs/tele-icon.png" alt=""> &nbsp;09696969690</a></li>
+            <li><a href=""><img src="imgs/email-icon.png" alt=""> &nbsp;fashionFlix@gmail.com</a></li>
+          </ul>
+        </div>
+
+        <div class="right-footer">
+          <p>FOLLOW US</p>
+          <ul>
+            <li><a href="https://www.facebook.com/"><img class="fb" src="imgs/fb-icon.webp" alt=""></a></li>
+            <li><a href="https://www.youtube.com/watch?v=GBIIQ0kP15E"><img class="yt" src="imgs/YT-icon.png" alt=""></a></li>
+            <li><a href="https://www.instagram.com/accounts/login/?hl=en"><img class="ins" src="imgs/insta-icon.png" alt=""></li></a>
+          </ul>
+      </div>
+    </footer>
+  </div>
+  <a class="return-top" href="#first-scroll"><img src="imgs/go-up.png" alt=""></a>
+</body>
+
+<script>
+  let num=0;
+  const side_bar=document.getElementById("side-bar");
+  function numberOfItems(){
+    let numberCartItems=document.querySelector('.num-items');
+    if(num>0){
+      numberCartItems.classList.add('add-background');
+      numberCartItems.innerHTML=num
+    }else{
+      numberCartItems.classList.remove('add-background');
+    }
+  }
+
+  function sideBar(){
+    if(side_bar.style.right==="-300px"){
+      side_bar.style.right="0";
+    }else{
+      side_bar.style.right="-300px";
+    }
+  }
+  
+</script>
+
+</html>
